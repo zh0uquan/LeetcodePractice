@@ -4,4 +4,9 @@ class Solution(object):
         :type people: List[List[int]]
         :rtype: List[List[int]]
         """
-        key = list(set(map(lamdba p: p[0], people)))
+        people.sort(key=lambda p: p[1])
+        people.sort(key=lambda p: -p[0])
+        res = []
+        for p in people:
+            res.insert(p[1], p)
+        return res
