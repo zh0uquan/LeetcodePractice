@@ -12,4 +12,7 @@ class Solution(object):
             if not right:
                 res += [p]
             return res
-        return genreate('', n, n, [])
+        return generate('', n, n, [])
+
+if __name__ == '__main__':
+    pass
